@@ -1,0 +1,60 @@
+/* General styles */
+/* Allgemeine Stile */
+
+body {
+    font-family: Arial, sans-serif; /* Sets the font family */
+    background-color: #2d2d2d; /* Sets the background color */
+    color: white; /* Sets the text color */
+    margin: 0; /* Removes default margin */
+    padding: 0; /* Removes default padding */
+}
+
+header {
+    background-color: #FAEF36; /* Sets the background color */
+    padding: 10px 20px; /* Adds padding */
+    box-sizing: border-box; /* Ensures padding is included in the element's total width */
+}
+
+nav {
+    display: flex; /* Displays its children in a flex container */
+    justify-content: space-between; /* Distributes space between the children */
+    align-items: center; /* Centers the children vertically */
+}
+
+.nav-links {
+    display: flex; /* Displays its children in a flex container */
+    gap: 20px; /* Sets the gap between children */
+}
+
+nav a {
+    text-decoration: none; /* Removes underline decoration */
+    color: #2d2d2d; /* Sets the text color */
+    font-weight: bold; /* Sets font weight to bold */
+}
+
+nav a:hover {
+    text-decoration: underline; /* Underlines the link on hover */
+}
+
+.logo {
+    width: 50px; /* Sets width */
+    height: auto; /* Allows height to adjust proportionally */
+    margin-left: auto; /* Moves the logo to the right */
+}
+
+.center {
+    display: block; /* Displays as a block element */
+    margin-left: auto; /* Centers horizontally */
+    margin-right: auto; /* Centers horizontally */
+    width: 50%; /* Sets width */
+}
+
+/* Styles for the Home page */
+/* Stile für die Home-Seite */
+
+#home {
+    min-height: 500px; /* Sets minimum height */
+    display: flex; /* Displays its children in a flex container */
+    align-items: center; /* Centers the children vertically */
+    justify-content: center; /* Centers the children horizontally */
+}

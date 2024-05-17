@@ -1,0 +1,132 @@
+/* General styles */
+/* Allgemeine Stile */
+
+body {
+    font-family: Arial, sans-serif; /* Sets the font family */
+    background-color: #2d2d2d; /* Sets the background color */
+    color: white; /* Sets the text color */
+    margin: 0; /* Removes default margin */
+    padding: 0; /* Removes default padding */
+}
+
+header {
+    background-color: #FAEF36; /* Sets the background color */
+    padding: 10px 20px; /* Adds padding */
+    box-sizing: border-box; /* Ensures padding is included in the element's total width */
+}
+
+nav {
+    display: flex; /* Displays its children in a flex container */
+    justify-content: space-between; /* Distributes space between the children */
+    align-items: center; /* Centers the children vertically */
+}
+
+.nav-links {
+    display: flex; /* Displays its children in a flex container */
+    gap: 20px; /* Sets the gap between children */
+}
+
+nav a {
+    text-decoration: none; /* Removes underline decoration */
+    color: #2d2d2d; /* Sets the text color */
+    font-weight: bold; /* Sets font weight to bold */
+}
+
+nav a:hover {
+    text-decoration: underline; /* Underlines the link on hover */
+}
+
+.logo {
+    width: 50px; /* Sets width */
+    height: auto; /* Allows height to adjust proportionally */
+    margin-left: auto; /* Moves the logo to the right */
+}
+
+.center {
+    display: block; /* Displays as a block element */
+    margin-left: auto; /* Centers horizontally */
+    margin-right: auto; /* Centers horizontally */
+    width: 50%; /* Sets width */
+}
+
+/* Styles for the Home page */
+/* Stile für die Home-Seite */
+
+#home {
+    min-height: 500px; /* Sets minimum height */
+    display: flex; /* Displays its children in a flex container */
+    align-items: center; /* Centers the children vertically */
+    justify-content: center; /* Centers the children horizontally */
+}
+
+/* Styles for the Pricing page */
+/* Stile für die Pricing-Seite */
+
+.pricing-container {
+    display: flex; /* Displays its children in a flex container */
+    justify-content: center; /* Centers the children horizontally */
+    gap: 20px; /* Sets the gap between children */
+    padding: 20px; /* Adds padding */
+}
+
+.pricing-card {
+    position: relative; /* Relative positioning as reference for absolute positioning of price */
+    border-radius: 10px; /* Adds border radius */
+    text-align: center; /* Centers the text */
+    padding: 0 20px 40px 20px; /* Adds padding */
+    width: 300px; /* Sets width */
+    height: 400px; /* Sets height */
+    cursor: pointer; /* Changes cursor to pointer */
+    transition: transform 0.2s, box-shadow 0.2s; /* Adds transition effects */
+    overflow: hidden; /* Hides overflowing content */
+}
+
+.pricing-card:hover {
+    transform: scale(1.05); /* Scales the card on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds box shadow on hover */
+}
+
+.pricing-card img {
+    width: 150px; /* Sets width */
+    height: auto; /* Allows height to adjust proportionally */
+    margin: 20px 0; /* Adds margin */
+}
+
+.pricing-card h2 {
+    margin: 0; /* Removes default margin */
+    padding: 10px 0; /* Adds padding */
+    font-size: 1.5em; /* Sets font size */
+    color: black; /* Sets text color */
+}
+
+.pricing-card p {
+    font-size: 4em; /* Sets font size */
+    font-weight: bold; /* Sets font weight to bold */
+    color: black; /* Sets text color */
+    margin: 10px 0 20px 0; /* Adds margin */
+    position: absolute; /* Sets positioning to absolute */
+    bottom: 10px; /* Sets distance from bottom */
+    width: 100%; /* Sets width to 100% */
+    left: 0; /* Centers horizontally */
+    text-align: center; /* Centers text */
+}
+
+.card-header {
+    background-color: white; /* Sets background color */
+    padding: 10px; /* Adds padding */
+    margin: 0 -20px; /* Adds negative margin */
+    border-top-left-radius: 10px; /* Adds border radius */
+    border-top-right-radius: 10px; /* Adds border radius */
+}
+
+.beginner {
+    background-color: #7ED957; /* Green */
+}
+
+.intermediate {
+    background-color: #FAEF36; /* Yellow */
+}
+
+.professional {
+    background-color: #FF3131; /* Red */
+}

@@ -1,0 +1,92 @@
+/* Styles for the body element */
+body {
+    font-family: Arial, sans-serif; /* Specifies the font family for the body text */
+    background-color: #2d2d2d; /* Sets the background color */
+    color: white; /* Sets the text color */
+    margin: 0; /* Removes default margin */
+    padding: 0; /* Removes default padding */
+}
+
+/* Styles for the header element */
+header {
+    background-color: #FAEF36; /* Sets the background color */
+    padding: 10px 20px; /* Adds padding */
+    box-sizing: border-box; /* Ensures padding is included in the element's total width */
+}
+
+/* Styles for the navigation bar */
+nav {
+    display: flex; /* Displays its children in a flex container */
+    justify-content: space-between; /* Distributes space between the children */
+    align-items: center; /* Centers the children vertically */
+}
+
+/* Styles for the navigation links container */
+.nav-links {
+    display: flex; /* Displays its children in a flex container */
+    gap: 20px; /* Sets the gap between children */
+}
+
+/* Styles for navigation links */
+nav a {
+    text-decoration: none; /* Removes underline decoration */
+    color: #2d2d2d; /* Sets the text color */
+    font-weight: bold; /* Sets font weight to bold */
+}
+
+/* Styles for navigation links on hover */
+nav a:hover {
+    text-decoration: underline; /* Underlines the link on hover */
+}
+
+/* Styles for the logo */
+.logo {
+    width: 50px; /* Sets width */
+    height: auto; /* Allows height to adjust proportionally */
+    margin-left: auto; /* Moves the logo to the right */
+}
+
+/* Styles for the vision section */
+.vision {
+    display: flex; /* Displays its children in a flex container */
+    justify-content: center; /* Centers its children horizontally */
+    align-items: flex-start; /* Aligns its children to the top */
+    padding: 20px; /* Adds padding */
+    gap: 20px; /* Sets the gap between children */
+}
+
+/* Styles for the founder image */
+.vision .founder-img {
+    width: 35%; /* Sets width */
+    height: auto; /* Allows height to adjust proportionally */
+    border-radius: 10px; /* Adds border radius */
+    flex-shrink: 0; /* Prevents the image from shrinking */
+}
+
+/* Styles for the vision text */
+.vision-text {
+    max-width: 800px; /* Sets maximum width */
+    flex-grow: 1; /* Allows the element to grow to fill available space */
+    padding-right: 20px; /* Adds padding to the right */
+    box-sizing: border-box; /* Ensures padding is included in the element's total width */
+}
+
+/* Styles for heading */
+h1 {
+    font-size: 2.5em; /* Sets font size */
+    margin-bottom: 20px; /* Adds margin at the bottom */
+}
+
+/* Styles for paragraphs */
+p {
+    font-size: 1.2em; /* Sets font size */
+    line-height: 1.6; /* Sets line height */
+}
+
+/* Styles for the abcd paragraph */
+.abcd {
+    margin-top: 20px; /* Adds margin at the top */
+    font-size: 0.9em; /* Sets font size */
+    color: #2d2d2d; /* Sets text color */
+    text-align: center; /* Aligns text to the center */
+}

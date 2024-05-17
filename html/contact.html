@@ -1,0 +1,77 @@
+<!DOCTYPE html> <!-- Specifies the document type and version of HTML -->
+<html lang="de"> <!-- Declares the language of the document -->
+<head>
+    <meta charset="UTF-8"> <!-- Declares the character encoding of the document -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Sets the viewport properties for responsive design -->
+    <title>Contact - MyCompressionCoach</title> <!-- Sets the title of the document -->
+    <link rel="stylesheet" href="contactStyles.css"> <!-- Links an external stylesheet for styling -->
+</head>
+<body>
+    <header> <!-- Header section of the webpage -->
+        <nav> <!-- Navigation bar -->
+            <div class="nav-links"> <!-- Container for navigation links -->
+                <a href="index.html">Home</a> <!-- Link to the home page -->
+                <a href="pricing.html">Pricing</a> <!-- Link to the pricing page -->
+                <a href="vision.html">Our Vision</a> <!-- Link to the vision page -->
+                <a href="contact.html">Contact</a> <!-- Link to the contact page (current page) -->
+            </div>
+            <img src="icon.png" alt="Logo" class="logo"> <!-- Logo image -->
+        </nav>
+    </header>
+    <main> <!-- Main content of the webpage -->
+        <section class="contact-form"> <!-- Section for the contact form -->
+            <h1>Contact Us</h1> <!-- Heading for the contact form -->
+            <form id="contactForm"> <!-- Contact form -->
+                <label for="firstName">First Name:</label> <!-- Label for the first name input -->
+                <input type="text" id="firstName" name="firstName" required> <!-- Input field for the first name -->
+
+                <label for="lastName">Last Name:</label> <!-- Label for the last name input -->
+                <input type="text" id="lastName" name="lastName" required> <!-- Input field for the last name -->
+
+                <label for="phone">Phone Number:</label> <!-- Label for the phone number input -->
+                <input type="tel" id="phone" name="phone" required> <!-- Input field for the phone number -->
+
+                <label for="email">Email:</label> <!-- Label for the email input -->
+                <input type="email" id="email" name="email" required> <!-- Input field for the email -->
+
+                <label for="message">Message:</label> <!-- Label for the message input -->
+                <textarea id="message" name="message" required></textarea> <!-- Textarea for the message -->
+
+                <button type="submit">Send</button> <!-- Submit button -->
+            </form>
+        </section>
+    </main>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) { 
+            event.preventDefault(); //Prevents default form submission behavior
+
+            // Get form values
+            const firstName = document.getElementById('firstName').value; //Retrieves the value of the first name input
+            const lastName = document.getElementById('lastName').value; //Retrieves the value of the last name input
+            const phone = document.getElementById('phone').value; //Retrieves the value of the phone number input
+            const email = document.getElementById('email').value; //Retrieves the value of the email input
+            const message = document.getElementById('message').value; //Retrieves the value of the message textarea
+
+            // Check if all fields are filled
+            if (!firstName || !lastName || !phone || !email || !message) { //Checks if any field is empty
+                alert('Please fill in all fields.'); //Displays an alert message
+                return; //Exits the function
+            }
+
+            // Log the form values
+            console.log('First Name:', firstName); //Logs the first name
+            console.log('Last Name:', lastName); //Logs the last name
+            console.log('Phone Number:', phone); //Logs the phone number
+            console.log('Email:', email); //Logs the email
+            console.log('Message:', message); //Logs the message
+
+            // Clear the form
+            document.getElementById('contactForm').reset(); //Resets the form inputs
+
+            // Show success message
+            alert('Your message has been sent.'); //Displays a success message
+        });
+    </script>
+</body>
+</html>

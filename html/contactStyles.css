@@ -1,0 +1,95 @@
+/* General styles */
+/* Allgemeine Stile */
+
+body {
+    font-family: Arial, sans-serif; /* Sets the font family */
+    background-color: #2d2d2d; /* Sets the background color */
+    color: white; /* Sets the text color */
+    margin: 0; /* Removes default margin */
+    padding: 0; /* Removes default padding */
+}
+
+header {
+    background-color: #FAEF36; /* Sets the background color */
+    padding: 10px 20px; /* Adds padding */
+    box-sizing: border-box; /* Ensures padding is included in the element's total width */
+}
+
+nav {
+    display: flex; /* Displays its children in a flex container */
+    justify-content: space-between; /* Distributes space between the children */
+    align-items: center; /* Centers the children vertically */
+}
+
+.nav-links {
+    display: flex; /* Displays its children in a flex container */
+    gap: 20px; /* Sets the gap between children */
+}
+
+nav a {
+    text-decoration: none; /* Removes underline decoration */
+    color: #2d2d2d; /* Sets the text color */
+    font-weight: bold; /* Sets font weight to bold */
+}
+
+nav a:hover {
+    text-decoration: underline; /* Underlines the link on hover */
+}
+
+.logo {
+    width: 50px; /* Sets width */
+    height: auto; /* Allows height to adjust proportionally */
+    margin-left: auto; /* Moves the logo to the right */
+}
+
+main {
+    display: flex; /* Displays its children in a flex container */
+    justify-content: center; /* Centers the children horizontally */
+    align-items: center; /* Centers the children vertically */
+    height: 100vh; /* Sets height to 100% of the viewport height */
+}
+
+.contact-form {
+    background-color: #444; /* Sets the background color */
+    padding: 20px; /* Adds padding */
+    border-radius: 10px; /* Adds border radius */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Adds box shadow */
+    width: 100%; /* Sets width to 100% */
+    max-width: 500px; /* Sets maximum width */
+    box-sizing: border-box; /* Ensures padding is included in the element's total width */
+}
+
+.contact-form h1 {
+    margin-top: 0; /* Removes top margin */
+    font-size: 2em; /* Sets font size */
+}
+
+.contact-form label {
+    display: block; /* Displays as a block element */
+    margin: 15px 0 5px; /* Adds margin */
+}
+
+.contact-form input, 
+.contact-form textarea {
+    width: 100%; /* Sets width to 100% */
+    padding: 10px; /* Adds padding */
+    margin-bottom: 10px; /* Adds margin at the bottom */
+    border: none; /* Removes border */
+    border-radius: 5px; /* Adds border radius */
+    box-sizing: border-box; /* Ensures padding is included in the element's total width */
+}
+
+.contact-form button {
+    width: 100%; /* Sets width to 100% */
+    padding: 10px; /* Adds padding */
+    border: none; /* Removes border */
+    border-radius: 5px; /* Adds border radius */
+    background-color: #FAEF36; /* Sets background color */
+    color: #2d2d2d; /* Sets text color */
+    font-weight: bold; /* Sets font weight to bold */
+    cursor: pointer; /* Changes cursor to pointer */
+}
+
+.contact-form button:hover {
+    background-color: #e0d92e; /* Changes background color on hover */
+}

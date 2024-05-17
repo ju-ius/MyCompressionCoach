@@ -1,0 +1,48 @@
+<!DOCTYPE html> <!-- Specifies the document type and version of HTML -->
+<html lang="de"> <!-- Declares the language of the document -->
+<head>
+    <meta charset="UTF-8"> <!-- Declares the character encoding of the document -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Sets the viewport properties for responsive design -->
+    <title>Pricing</title> <!-- Sets the title of the document -->
+    <link rel="stylesheet" href="pricingStyles.css"> <!-- Links an external stylesheet for styling -->
+</head>
+<body>
+    <header> <!-- Header section of the webpage -->
+        <nav> <!-- Navigation bar -->
+            <div class="nav-links"> <!-- Container for navigation links -->
+                <a href="index.html">Home</a> <!-- Link to the home page -->
+                <a href="pricing.html">Pricing</a> <!-- Link to the pricing page (current page) -->
+                <a href="vision.html">Our Vision</a> <!-- Link to the vision page -->
+                <a href="contact.html">Contact</a> <!-- Link to the contact page -->
+            </div>
+            <img src="icon.png" alt="Logo" class="logo"> <!-- Logo image -->
+        </nav>
+    </header>
+    <main> <!-- Main content of the webpage -->
+        <div class="pricing-container"> <!-- Container for pricing cards -->
+            <div class="pricing-card beginner" onclick="showPlan('BEGINNER')"> <!-- Pricing card for the beginner plan -->
+                <div class="card-header"> <!-- Header section of the card -->
+                    <h2>BEGINNER</h2> <!-- Heading for the beginner plan -->
+                </div>
+                <img src="warnweste.png" alt="Beginner Plan"> <!-- Image for the beginner plan -->
+                <p>$50</p> <!-- Price of the beginner plan -->
+            </div>
+            <div class="pricing-card intermediate" onclick="showPlan('INTERMEDIATE')"> <!-- Pricing card for the intermediate plan -->
+                <div class="card-header"> <!-- Header section of the card -->
+                    <h2>INTERMEDIATE</h2> <!-- Heading for the intermediate plan -->
+                </div>
+                <img src="erste-hilfe-kasten.png" alt="Intermediate Plan"> <!-- Image for the intermediate plan -->
+                <p>$100</p> <!-- Price of the intermediate plan -->
+            </div>
+            <div class="pricing-card professional" onclick="showPlan('PROFESSIONAL')"> <!-- Pricing card for the professional plan -->
+                <div class="card-header"> <!-- Header section of the card -->
+                    <h2>PROFESSIONAL</h2> <!-- Heading for the professional plan -->
+                </div>
+                <img src="feuerloscher.png" alt="Professional Plan"> <!-- Image for the professional plan -->
+                <p>$999</p> <!-- Price of the professional plan -->
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script> <!-- Links an external JavaScript file -->
+</body>
+</html>
