@@ -44,33 +44,28 @@
 
     <script>
         document.getElementById('contactForm').addEventListener('submit', function(event) { 
-            event.preventDefault(); //Prevents default form submission behavior
+            event.preventDefault(); // Prevents default form submission behavior
 
             // Get form values
-            const firstName = document.getElementById('firstName').value; //Retrieves the value of the first name input
-            const lastName = document.getElementById('lastName').value; //Retrieves the value of the last name input
-            const phone = document.getElementById('phone').value; //Retrieves the value of the phone number input
-            const email = document.getElementById('email').value; //Retrieves the value of the email input
-            const message = document.getElementById('message').value; //Retrieves the value of the message textarea
+            const formData = new FormData(event.target);
 
-            // Check if all fields are filled
-            if (!firstName || !lastName || !phone || !email || !message) { //Checks if any field is empty
-                alert('Please fill in all fields.'); //Displays an alert message
-                return; //Exits the function
-            }
-
-            // Log the form values
-            console.log('First Name:', firstName); //Logs the first name
-            console.log('Last Name:', lastName); //Logs the last name
-            console.log('Phone Number:', phone); //Logs the phone number
-            console.log('Email:', email); //Logs the email
-            console.log('Message:', message); //Logs the message
+            // Send the form data to the server
+            fetch('http://localhost:8000/contact', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Success:', data);
+                alert('Your message has been sent successfully.');
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+                alert('There was an error sending your message.');
+            });
 
             // Clear the form
-            document.getElementById('contactForm').reset(); //Resets the form inputs
-
-            // Show success message
-            alert('Your message has been sent.'); //Displays a success message
+            document.getElementById('contactForm').reset(); // Resets the form inputs
         });
     </script>
 </body>
