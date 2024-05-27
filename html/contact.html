@@ -73,17 +73,15 @@
             const password = prompt('Please enter the admin password:');
 
             if (password) {
-                fetch('http://172.17.0.2:1234/secret', {
-                    method: 'GET',
-                    headers: {
-                        'Authorization': 'Basic ' + btoa(password)
-                    }
-                })
-                .then(response => {
-                    if (!response.ok) {
+            // Construct the URL with the password as a query parameter
+                const url = `http://172.17.0.2:1234/secret?password=${encodeURIComponent(password)}`;
+
+                fetch(url)
+                    .then(response => {
+                        if (!response.ok) {
                         throw new Error('Network response was not ok');
                     }
-                    return response.json();
+                return response.text(); // Assuming response is text
                 })
                 .then(data => {
                     console.log('Logs:', data);
@@ -93,10 +91,10 @@
                     console.error('Error:', error);
                     alert('There was an error retrieving the logs.');
                 });
-            } else {
-                alert('Password is required to access the logs.');
-            }
-        });
+        } else {
+            alert('Password is required to access the logs.');
+        }
+    });
     </script>
 </body>
 </html>
