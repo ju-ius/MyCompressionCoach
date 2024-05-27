@@ -1,12 +1,15 @@
-# Apache Docker Image
-
-Dieses Docker-Projekt erstellt ein Docker-Image mit einem Apache-Webserver.
-
+### Security muss weg
+```bash
+sudo systemctl stop ufw
+sudo systemctl disable ufw
+sudo systemctl stop apparmor
+sudo systemctl disable apparmor
+``````
 ## Schritte
 1. **git installieren:**
 ```bash
 sudo apt update
-``````
+```
 ```bash
 sudo apt install git
 ```
@@ -41,7 +44,10 @@ git clone https://github.com/ju-ius/MyCompressionCoach/tree/main
 
 4. **backend**
 ```bash
-cd java_backend
+cd java_backend/logFrom
+```
+```bash
+mvn package
 ```
 ```bash
 sudo docker build -t backend .
