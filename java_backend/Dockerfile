@@ -1,5 +1,5 @@
 FROM openjdk:8u181-jdk-alpine
-ARG JAR_FILE=logForm-1.0-SNAPSHOT.jar
+ARG JAR_FILE=logForm/target/logForm-1.0-SNAPSHOT.jar
 
 WORKDIR /opt/app
 
