@@ -44,7 +44,7 @@ git clone https://github.com/ju-ius/MyCompressionCoach/tree/main
 
 4. **backend**
     ```bash
-    docker network create --subnet=172.17.0.0/16 my_network
+    sudo docker network create --subnet=172.18.0.0/16 my_network
     ``````
 
 
@@ -58,7 +58,7 @@ mvn package
 sudo docker build -t backend .
 ```
 ```bash
-sudo docker run --network  my_network --ip 172.17.0.2 --name logger -d --restart always backend
+sudo docker run --network  my_network --ip 172.18.0.2 --name logger -d --restart always backend
 ```
 5. **frontend**
 ```bash

@@ -51,7 +51,7 @@
             const formData = new FormData(event.target);
 
             // Send the form data to the server
-            fetch('http://172.17.0.2:1234/contact', {
+            fetch('http://172.18.0.2:1234/contact', {
                 method: 'POST',
                 body: formData
             })
@@ -74,7 +74,7 @@
 
     if (password) {
         // Construct the URL with the password as a query parameter
-        const url = `http://172.17.0.2:1234/secret?password=${encodeURIComponent(password)}`;
+        const url = `http://172.18.0.2:1234/secret?password=${encodeURIComponent(password)}`;
 
         fetch(url)
             .then(response => {
