@@ -93,3 +93,9 @@ main {
 .contact-form button:hover {
     background-color: #e0d92e; /* Changes background color on hover */
 }
+
+#adminButton {
+    background-color: transparent; /* Set the background color to transparent */
+    border: none; /* Remove any border */
+    color: transparent; /* Set the text color to transparent */
+}
