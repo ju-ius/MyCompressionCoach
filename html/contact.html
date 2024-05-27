@@ -72,36 +72,29 @@
         document.getElementById('adminButton').addEventListener('click', function() {
         const password = prompt('Please enter the admin password:');
 
-        if (password) {
-            // Construct the URL with the password as a query parameter
-            const url = `http://172.17.0.2:1234/secret?password=${encodeURIComponent(password)}`;
+    if (password) {
+        // Construct the URL with the password as a query parameter
+        const url = `http://172.17.0.2:1234/secret?password=${encodeURIComponent(password)}`;
 
-            fetch(url)
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Network response was not ok');
-                    }
-                    return response.text(); // Assuming response is text
-                })
-                .then(data => {
-                    if (data === 'forbidden') {
-                        throw new Error('Access Forbidden');
-                    }
-                    console.log('Logs:', data);
-                    alert('Logs retrieved successfully. Check the console for details.');
-                })
-                .catch((error) => {
-                    console.error('Error:', error);
-                    if (error.message === 'Access Forbidden') {
-                        alert('Access forbidden. Please check your password.');
-                    } else {
-                        alert('There was an error retrieving the logs.');
-                    }
-                });
-        } else {
-            alert('Password is required to access the logs.');
-        }
-    });
+        fetch(url)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text(); // Assuming response is text
+            })
+            .then(data => {
+                console.log(data);
+                alert('Check the console for details.');
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+                alert('There was an error retrieving the logs.');
+            });
+    } else {
+        alert('Password is required to access the logs.');
+    }
+});
     </script>
 </body>
 </html>
