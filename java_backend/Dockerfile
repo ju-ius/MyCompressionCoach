@@ -7,4 +7,4 @@ COPY ./${JAR_FILE} /opt/app/
 COPY password.txt /opt/app/
 COPY server.log  /opt/app/
 
-ENTRYPOINT ["java", "-jar", "/logForm/target/logForm-1.0-SNAPSHOT.jar"]
+ENTRYPOINT ["java", "-jar", "logForm/target/logForm-1.0-SNAPSHOT.jar"]
