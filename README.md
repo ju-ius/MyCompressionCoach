@@ -48,6 +48,9 @@ git clone https://github.com/ju-ius/MyCompressionCoach/tree/main
 cd java_backend/logFrom
 ```
 ```bash
+sudo apt install mvn
+```
+```bash
 mvn package
 ```
 ```bash
