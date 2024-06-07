@@ -73,37 +73,48 @@ docker run --name frontend -d -p 80:80  --restart always frontend
 
 ### XZ Exploit installieren
 1. xzbot repository clonen 
-```
+```bash
 git clone git@github.com:amlweems/xzbot.git
 ```
 
 2. Netcat Traditional installieren (vereinfacht exploit)
-```
+```bash
 sudo apt-get install netcat-traditional
 sudo apt remove netcat-openbsd
 ```
 
 3. Existierendes liblzma entfernen
-```
+```bash
 sudo rm /usr/lib/x86_64-linux-gnu/liblzma.so*
 ```
 
 4. XZ liblzma library kopieren
-```
+```bash
 sudo cp xzbot/assets/liblzma.so.5.6.1.patch /usr/lib/x86_64-linux-gnu/
 ```
 
 5. System neu verlinken
-```
+```bash
 sudo ldconfig -v | grep liblzma
 ```
 Zeigt hier liblzma.so.5 -> liblzma.so.5.6.1.patch passt alles
+
+## Flag 3 Creation
+```bash
+cat micha.gif >> neuesLogo.gif
+cat flag3.zip >> neuesLogo.gif
+
+# Flagge extrahieren:
+unzip neuesLogo.gif
+```
 
 ## User passwörter:
 micha: ichLiebeCompressionCoach2024!!
 julius: ArrIchBinEinPirat0815!
 nils: ¡IchMacheKeinMasterHihi5612!
 robert: ichbinDerScherenmann03!
+
+osboxes.org: sx[E9jVu>O-`?JS7
 
 ## Flags:
 1. THM{ab0bfd73daaec7912dcdca1ba0ba3d05}
