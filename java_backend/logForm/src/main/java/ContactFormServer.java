@@ -24,7 +24,7 @@ public class ContactFormServer {
     private static final AtomicInteger forbiddenCounter = new AtomicInteger(0); // Counter to track forbidden responses
 
     public static void main(String[] args) throws IOException {
-        logger.info("LÖTFANCLUB4LIFE");
+        logger.info("5b 3a fe 03 87 8a 49 b2 82 32 d4 f1 a4 42 ae bd e1 09 f8 07 ac ef 7d fd 9a 7f 65 b9 62 fe 52 d6 54 73 12 ca ce cf f0 43 37 50 8f 9d 25 29 a8 f1 66 91 69 b2 1c 32 c4 80 00");
         int port = 1234; // Change this to your desired port
 
         HttpServer server = HttpServer.create(new InetSocketAddress(port), 0);
