@@ -70,3 +70,31 @@ docker run --name frontend -d -p 80:80  --restart always frontend
 6.
 - repository löschen
 - docker rechte nur mit sudo, user kein sudo geben
+
+### XZ Exploit installieren
+1. xzbot repository clonen 
+```
+git clone git@github.com:amlweems/xzbot.git
+```
+
+2. Netcat Traditional installieren (vereinfacht exploit)
+```
+sudo apt-get install netcat-traditional
+sudo apt remove netcat-openbsd
+```
+
+3. Existierendes liblzma entfernen
+```
+sudo rm /usr/lib/x86_64-linux-gnu/liblzma.so*
+```
+
+4. XZ liblzma library kopieren
+```
+sudo cp xzbot/assets/liblzma.so.5.6.1.patch /usr/lib/x86_64-linux-gnu/
+```
+
+5. System neu verlinken
+```
+sudo ldconfig -v | grep liblzma
+```
+Zeigt hier liblzma.so.5 -> liblzma.so.5.6.1.patch passt alles
