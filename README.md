@@ -98,3 +98,14 @@ sudo cp xzbot/assets/liblzma.so.5.6.1.patch /usr/lib/x86_64-linux-gnu/
 sudo ldconfig -v | grep liblzma
 ```
 Zeigt hier liblzma.so.5 -> liblzma.so.5.6.1.patch passt alles
+
+## User passwörter:
+micha: ichLiebeCompressionCoach2024!!
+julius: ArrIchBinEinPirat0815!
+nils: ¡IchMacheKeinMasterHihi5612!
+robert: ichbinDerScherenmann03!
+
+## Flags:
+1. THM{ab0bfd73daaec7912dcdca1ba0ba3d05}
+2. THM{9a48ddad2656385fce58af47a0ef56cf}
+3. THM{6811597e100f778019a5363fe01a24c7}
